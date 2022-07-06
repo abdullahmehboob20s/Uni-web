@@ -1,0 +1,12 @@
+@use "../utils" as u;
+
+.card {
+  background: #000000;
+  border-radius: u.rem(10);
+  height: u.rem(152);
+  border: 4px solid #d09756;
+
+  &.active {
+    background: #d9d9d9;
+  }
+}

@@ -1,0 +1,114 @@
+@use "../utils" as u;
+@use "../globals/colors" as colors;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: u.rem(26) 0;
+
+    & > :not(:last-child) {
+      margin-right: u.rem(100);
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      max-width: u.rem(700);
+
+      .inputWrapper {
+        position: relative;
+        display: flex;
+        width: 100%;
+
+        &::after,
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -2;
+        }
+
+        &::after {
+          background: url(../../public/images/input-border-img-top.svg);
+          background-position: top center;
+          background-repeat: no-repeat;
+          background-size: 100%;
+        }
+        &::before {
+          background: url(../../public/images/input-border-img-bottom.svg);
+          background-position: bottom center;
+          background-repeat: no-repeat;
+          background-size: 100%;
+        }
+
+        input {
+          width: 100%;
+          padding: u.rem(16) u.rem(16);
+          padding-right: u.rem(60);
+        }
+
+        span {
+          display: flex;
+          position: absolute;
+          top: 54%;
+          right: u.rem(16);
+          transform: translateY(-50%);
+          pointer-events: none;
+        }
+      }
+
+      & > :not(:last-child) {
+        margin-right: u.rem(60);
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+
+      button {
+        transition: all 0.2s ease;
+        padding: u.rem(16) u.rem(30);
+      }
+      button.active {
+        border: 2px solid colors.$orange;
+      }
+
+      & > :not(:last-child) {
+        margin-right: u.rem(16);
+      }
+    }
+
+    @include u.breakpoint(twoxLarge) {
+      .left {
+        max-width: u.rem(550);
+
+        .logo {
+          width: u.rem(70);
+        }
+      }
+
+      .right {
+        button {
+          transition: all 0.2s ease;
+          padding: u.rem(14) u.rem(24);
+        }
+        & > :not(:last-child) {
+          margin-right: u.rem(14);
+        }
+      }
+    }
+  }
+}

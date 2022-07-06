@@ -1,0 +1,32 @@
+@use "../utils" as u;
+
+.wrapper {
+  main {
+    display: flex;
+    background: url(../../public/images/about-us-bg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+    padding: u.rem(120) u.rem(100);
+
+    aside {
+      flex: 0.6;
+
+      .img {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-color: #d9d9d9;
+        border-radius: u.rem(12);
+        box-shadow: 0px 31px 36px 8px rgba(0, 0, 0, 0.23);
+      }
+    }
+    section {
+      flex: 1;
+    }
+
+    & > :not(:last-child) {
+      margin-right: u.rem(100);
+    }
+  }
+}

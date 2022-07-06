@@ -1,0 +1,26 @@
+@use "../utils" as u;
+
+.heroWrapper {
+  position: relative;
+
+  .heroEgg {
+    position: absolute;
+    top: 65%;
+    transform: translateY(-50%);
+    right: -18%;
+    z-index: -20;
+    border: 2px solid transparent;
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    p {
+      max-width: u.rem(500);
+    }
+  }
+}

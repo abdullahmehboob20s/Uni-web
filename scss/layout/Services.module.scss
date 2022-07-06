@@ -1,0 +1,14 @@
+@use "../utils" as u;
+
+.wrapper {
+  .chart {
+    display: grid;
+    grid-template-columns: repeat(2, u.rem(500));
+    justify-content: space-between;
+    gap: u.rem(50);
+
+    div {
+      height: u.rem(200);
+    }
+  }
+}
