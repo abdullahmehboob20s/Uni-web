@@ -5,11 +5,13 @@ import Hero from "layouts/Hero";
 import Navbar from "layouts/Navbar";
 import Partners from "layouts/Partners";
 import Services from "layouts/Services";
+import Sidebar from "layouts/Sidebar";
 
 export default function Home() {
   return (
     <div>
       <Navbar />
+      <Sidebar />
       <div className="mb-200px">
         <Hero />
       </div>
