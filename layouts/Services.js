@@ -12,6 +12,12 @@ function Services() {
         alt=""
       />
 
+      <img
+        src="./images/services-red-blob.png"
+        className={styles.leftRedBlob}
+        alt=""
+      />
+
       <div className={`mb-120px ${styles.titleWrapper}`}>
         <img
           src="./images/services-title-stripe.svg"

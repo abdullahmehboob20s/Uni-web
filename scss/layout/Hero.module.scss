@@ -8,6 +8,10 @@
     top: 0;
     right: 0;
     z-index: -40;
+
+    @include u.breakpoint(large) {
+      display: none;
+    }
   }
 
   .heroStripe {
@@ -45,6 +49,7 @@
   .heroEgg {
     position: absolute;
     top: 65%;
+    // top: 90%;
     transform: translateY(-50%);
     right: -18%;
     z-index: -20;
@@ -53,6 +58,17 @@
     height: 100%;
     object-fit: cover;
   }
+  // .heroEgg {
+  //   position: absolute;
+  //   top: 62%;
+  //   transform: translateY(-50%);
+  //   right: -6%;
+  //   z-index: -20;
+  //   border: 2px solid transparent;
+  //   width: 60%;
+  //   height: 100%;
+  //   object-fit: cover;
+  // }
   .hero {
     min-height: 100vh;
     display: flex;
