@@ -60,4 +60,8 @@
       width: 55%;
     }
   }
+
+  @include u.breakpoint(large) {
+    display: none;
+  }
 }
