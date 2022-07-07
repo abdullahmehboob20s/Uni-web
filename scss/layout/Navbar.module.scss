@@ -7,12 +7,15 @@
   left: 0;
   width: 100%;
   z-index: 100;
+  transition: all 0.3s ease;
 
   nav {
+    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: u.rem(26) 0;
+    z-index: 90;
 
     & > :not(:last-child) {
       margin-right: u.rem(100);
@@ -23,6 +26,11 @@
       align-items: center;
       flex: 1;
       max-width: u.rem(700);
+
+      .logo {
+        transition: all 0.3s ease;
+        width: u.rem(85);
+      }
 
       .inputWrapper {
         position: relative;
@@ -89,6 +97,14 @@
       & > :not(:last-child) {
         margin-right: u.rem(16);
       }
+
+      .closeNavbarBtn {
+        display: none;
+      }
+    }
+
+    .hamburger {
+      display: none;
     }
 
     @include u.breakpoint(twoxLarge) {
@@ -103,10 +119,158 @@
       .right {
         button {
           transition: all 0.2s ease;
-          padding: u.rem(14) u.rem(24);
+          padding: u.rem(10) u.rem(20);
         }
         & > :not(:last-child) {
           margin-right: u.rem(14);
+        }
+      }
+    }
+
+    @include u.breakpoint(xLarge) {
+      .left {
+        max-width: u.rem(550);
+
+        .logo {
+          width: u.rem(60);
+        }
+
+        & > :not(:last-child) {
+          margin-right: u.rem(40);
+        }
+      }
+      .right {
+        button {
+          transition: all 0.2s ease;
+          padding: u.rem(10) u.rem(16);
+        }
+        & > :not(:last-child) {
+          margin-right: u.rem(10);
+        }
+      }
+    }
+
+    @include u.breakpoint(large) {
+      & > :not(:last-child) {
+        margin-right: u.rem(0);
+      }
+
+      .right {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        width: 300px;
+        height: 100%;
+        background-color: black;
+        flex-direction: column;
+        align-items: unset;
+        border-left: 2px solid #525252;
+        padding: u.rem(40);
+        transition: all 0.3s ease;
+        transform: translateX(300px);
+        z-index: 110;
+
+        &.active {
+          transform: translateX(u.rem(0));
+        }
+
+        .closeNavbarBtn {
+          display: block;
+          cursor: pointer;
+          display: flex;
+          width: fit-content;
+          padding: 0 0;
+          margin-left: u.rem(-5);
+        }
+
+        & > :not(:last-child) {
+          margin-right: u.rem(0);
+          margin-bottom: u.rem(30);
+        }
+      }
+
+      .left {
+        width: 100%;
+        max-width: unset;
+
+        margin-right: u.rem(40);
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+
+    @include u.breakpoint(small) {
+      padding: u.rem(20) 0;
+
+      .left {
+        .logo {
+          width: u.rem(46);
+        }
+
+        .inputWrapper {
+          input {
+            padding: u.rem(12) u.rem(16);
+            padding-right: u.rem(60);
+          }
+
+          span {
+            svg {
+              font-size: 20px;
+            }
+          }
+        }
+
+        margin-right: u.rem(30);
+
+        & > :not(:last-child) {
+          margin-right: u.rem(26);
+        }
+      }
+    }
+
+    @include u.breakpoint(xsmall) {
+      .left {
+        .logo {
+          width: u.rem(40);
+        }
+      }
+    }
+  }
+
+  &.scrolled {
+    background-color: black;
+    box-shadow: 0 u.rem(5) u.rem(10) rgba(208, 151, 86, 0.2);
+
+    nav {
+      padding: u.rem(16) 0;
+
+      .left {
+        .logo {
+          width: u.rem(70);
+        }
+      }
+
+      @include u.breakpoint(twoxLarge) {
+        .left {
+          .logo {
+            width: u.rem(50);
+          }
+        }
+      }
+      @include u.breakpoint(small) {
+        .left {
+          .logo {
+            width: u.rem(36);
+          }
+        }
+      }
+      @include u.breakpoint(xsmall) {
+        .left {
+          .logo {
+            width: u.rem(34);
+          }
         }
       }
     }

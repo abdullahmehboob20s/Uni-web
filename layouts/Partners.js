@@ -5,7 +5,7 @@ import styles from "scss/layout/Partners.module.scss";
 function Partners() {
   return (
     <div>
-      <div className="container-wrapper-2">
+      <div className="container-wrapper-3">
         <h1 className="fs-70px white mb-80px text-center">
           PARTNERS & INSPIRATIONS
         </h1>

@@ -3,6 +3,7 @@
 .card {
   display: flex;
   position: relative;
+  height: u.rem(140);
 
   &::before {
     content: "";
@@ -19,10 +20,14 @@
     flex: 1;
     display: flex;
     align-items: center;
+
+    p {
+      font-size: 1.5vw;
+    }
   }
 
   .right {
-    width: u.rem(239);
+    width: 45%;
     display: flex;
     align-content: center;
     justify-content: center;
@@ -67,6 +72,54 @@
     .right {
       clip-path: polygon(0 0, 70% 0, 180% 100%, 100% 100%, 0 100%, 0 0%);
       box-shadow: none;
+    }
+  }
+
+  @include u.breakpoint(large) {
+    height: u.rem(100);
+  }
+  @include u.breakpoint(medium) {
+    height: u.rem(80);
+
+    .left {
+      p {
+        font-size: 1.6vw;
+      }
+    }
+
+    .right {
+      width: 38%;
+    }
+
+    &.left {
+      .left {
+        margin-right: u.rem(18);
+      }
+    }
+
+    &.right {
+      .left {
+        margin-left: u.rem(18);
+      }
+    }
+  }
+
+  @include u.breakpoint(small) {
+    height: u.rem(60);
+
+    .left {
+      p {
+        font-size: 1.7vw;
+      }
+    }
+  }
+  @include u.breakpoint(xsmall) {
+    height: u.rem(50);
+
+    .left {
+      p {
+        font-size: 1.8vw;
+      }
     }
   }
 }

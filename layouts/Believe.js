@@ -3,7 +3,13 @@ import styles from "scss/layout/Believe.module.scss";
 
 function Believe() {
   return (
-    <div>
+    <div className={styles.wrapper}>
+      <img
+        src="./images/belive-stripe-1.svg"
+        className={styles.believeStripe1}
+        alt=""
+      />
+
       <div className="container-wrapper-2">
         <div className={styles.container}>
           <div className={styles.left}>

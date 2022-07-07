@@ -1,17 +1,42 @@
 @use "../utils" as u;
 
-.container {
-  display: flex;
-  align-items: center;
+.wrapper {
+  position: relative;
 
-  .left {
-    flex: 1;
-  }
-  .right {
-    flex: 1;
+  .believeStripe1 {
+    position: absolute;
+    top: 16%;
+    left: 0;
+    width: 100%;
+    z-index: -40;
   }
 
-  & > :not(:last-child) {
-    margin-right: u.rem(100);
+  .container {
+    display: flex;
+    align-items: center;
+
+    .left {
+      flex: 1;
+    }
+    .right {
+      flex: 1;
+    }
+
+    & > :not(:last-child) {
+      margin-right: u.rem(100);
+    }
+
+    @include u.breakpoint(medium) {
+      flex-direction: column;
+
+      .left {
+        max-width: u.rem(400);
+      }
+
+      & > :not(:last-child) {
+        margin-right: u.rem(0);
+        margin-bottom: u.rem(40);
+      }
+    }
   }
 }

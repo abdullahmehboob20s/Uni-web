@@ -4,29 +4,20 @@
   max-width: 1700px;
   width: 90%;
   margin: 0 auto;
-
-  // @include u.breakpoint(twoxLarge) {
-  //   width: 70%;
-  // }
-  // @include u.breakpoint(xLarge) {
-  //   width: 80%;
-  // }
-  // @include u.breakpoint(large) {
-  //   width: 90%;
-  // }
 }
 .container-wrapper-2 {
   max-width: 1600px;
   width: 85%;
   margin: 0 auto;
-  // border: 2px solid red;
+}
+.container-wrapper-3 {
+  max-width: 1400px;
+  width: 70%;
+  margin: 0 auto;
 
-  // @include u.breakpoint(twoxLarge) {
-  //   width: 80%;
-  // }
-  // @include u.breakpoint(small) {
-  //   width: 90%;
-  // }
+  @include u.breakpoint(large) {
+    width: 85%;
+  }
 }
 
 .block {

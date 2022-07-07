@@ -6,6 +6,34 @@ function Hero() {
   return (
     <div className={styles.heroWrapper}>
       <img src="./images/hero-egg.svg" className={styles.heroEgg} alt="" />
+
+      <img
+        src="./images/hero-blob-top-right.png"
+        className={styles.heroBlobTopRight}
+        alt=""
+      />
+
+      <img
+        src="./images/stripe-hero.svg"
+        className={styles.heroStripe}
+        alt=""
+      />
+      <img
+        src="./images/egg-stripe-1.svg"
+        className={styles.eggStripe1}
+        alt=""
+      />
+      <img
+        src="./images/egg-stripe-2.svg"
+        className={styles.eggStripe2}
+        alt=""
+      />
+      <img
+        src="./images/egg-stripe-3.svg"
+        className={styles.eggStripe3}
+        alt=""
+      />
+
       <div className="container-wrapper-2">
         <div className={styles.hero}>
           <div>
@@ -20,6 +48,12 @@ function Hero() {
 
             <ShapedButton title={"KNOW MORE"} />
           </div>
+
+          <img
+            src="./images/hero-egg.png"
+            className={styles.heroRightImg}
+            alt=""
+          />
         </div>
       </div>
     </div>

@@ -9,9 +9,7 @@ function ServiceCard({ direction, children, img, size }) {
       }`}
     >
       <div className={styles.left}>
-        <p className="font-secondary white lh-1_4 weight-6 fs-34px">
-          {children}
-        </p>
+        <p className="font-secondary white lh-1_4 weight-6">{children}</p>
       </div>
       <div className={styles.right}>
         <img src={img} style={{ width: size }} alt="" />

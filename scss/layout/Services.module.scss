@@ -1,14 +1,81 @@
 @use "../utils" as u;
 
 .wrapper {
-  .chart {
-    display: grid;
-    grid-template-columns: repeat(2, u.rem(500));
-    justify-content: space-between;
-    gap: u.rem(50);
+  position: relative;
 
-    div {
-      height: u.rem(200);
+  .upperBlob {
+    position: absolute;
+    bottom: 30%;
+    right: 0;
+    z-index: -40;
+  }
+
+  .titleWrapper {
+    position: relative;
+
+    .titleStripe {
+      position: absolute;
+      top: 80%;
+      left: 0;
+      width: 100%;
+      z-index: -40;
+      transform: translateY(-50%);
+    }
+  }
+
+  .chart {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+
+    .cardsStripe {
+      position: absolute;
+      top: 54%;
+      left: 50%;
+      width: 25%;
+      height: 100%;
+      transform: translate(-50%, -50%);
+      z-index: -20;
+    }
+
+    .cardBlob {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -40;
+    }
+
+    .cardsLeft {
+      width: 40%;
+      display: grid;
+      gap: u.rem(36);
+    }
+    .cardsRight {
+      width: 40%;
+      display: grid;
+      gap: u.rem(36);
+    }
+  }
+
+  @include u.breakpoint(large) {
+    .chart {
+      .cardsLeft {
+        gap: u.rem(22);
+      }
+      .cardsRight {
+        gap: u.rem(22);
+      }
+    }
+  }
+  @include u.breakpoint(small) {
+    .chart {
+      .cardsLeft {
+        gap: u.rem(18);
+      }
+      .cardsRight {
+        gap: u.rem(18);
+      }
     }
   }
 }
