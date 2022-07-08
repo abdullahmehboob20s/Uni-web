@@ -1,35 +1,46 @@
 import ShapedButton from "components/ShapedButton";
 import React from "react";
 import styles from "scss/layout/Hero.module.scss";
+import { IKImage } from "imagekitio-react";
 
 function Hero() {
   return (
     <div className={styles.heroWrapper}>
-      <img src="./images/hero-egg.svg" className={styles.heroEgg} alt="" />
+      <IKImage
+        lqip={{ active: true }}
+        path="/images/hero-egg.svg"
+        className={styles.heroEgg}
+        alt=""
+      />
 
-      <img
-        src="./images/hero-blob-top-right.png"
+      <IKImage
+        lqip={{ active: true }}
+        path="/images/hero-blob-top-right.png"
         className={styles.heroBlobTopRight}
         alt=""
       />
 
-      <img
-        src="./images/stripe-hero.svg"
+      <IKImage
+        lqip={{ active: true }}
+        path="/images/stripe-hero.svg"
         className={styles.heroStripe}
         alt=""
       />
-      <img
-        src="./images/egg-stripe-1.svg"
+      <IKImage
+        lqip={{ active: true }}
+        path="/images/egg-stripe-1.svg"
         className={styles.eggStripe1}
         alt=""
       />
-      <img
-        src="./images/egg-stripe-2.svg"
+      <IKImage
+        lqip={{ active: true }}
+        path="/images/egg-stripe-2.svg"
         className={styles.eggStripe2}
         alt=""
       />
-      <img
-        src="./images/egg-stripe-3.svg"
+      <IKImage
+        lqip={{ active: true }}
+        path="/images/egg-stripe-3.svg"
         className={styles.eggStripe3}
         alt=""
       />
@@ -49,8 +60,9 @@ function Hero() {
             <ShapedButton title={"KNOW MORE"} />
           </div>
 
-          <img
-            src="./images/hero-egg.png"
+          <IKImage
+            path="/images/hero-egg.png"
+            lqip={{ active: true }}
             className={styles.heroRightImg}
             alt=""
           />

@@ -1,11 +1,13 @@
+import { IKImage } from "imagekitio-react";
 import React from "react";
 import styles from "scss/layout/AboutUs.module.scss";
 
 function AboutUs() {
   return (
     <div className={styles.wrapper}>
-      <img
-        src="./images/about-us-stripes.png"
+      <IKImage
+        lqip={{ active: true }}
+        path="/images/about-us-stripes.png"
         className={styles.stripes}
         alt=""
       />
@@ -13,7 +15,12 @@ function AboutUs() {
       <div className="container-wrapper-2">
         <main>
           <aside>
-            <img src="./images/aboutUs-egg.png" className="w-full" alt="" />
+            <IKImage
+              lqip={{ active: true }}
+              path="/images/aboutUs-egg.png"
+              className="w-full"
+              alt=""
+            />
           </aside>
           <section>
             <h1 className="fs-84px white weight-4 mb-30px">ABOUT US</h1>

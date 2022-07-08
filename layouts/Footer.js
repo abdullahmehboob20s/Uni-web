@@ -4,6 +4,7 @@ import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import { BsDiscord, BsGithub, BsLinkedin } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import useMediaQuery from "hooks/useMediaQuery";
+import { IKImage } from "imagekitio-react";
 
 function Footer() {
   const isBellow760px = useMediaQuery("(max-width : 47.5em)"); // 760px
@@ -15,14 +16,24 @@ function Footer() {
           <div className={`${styles.line} mb-50px`}></div>
 
           <div className={`${styles.eggBoxOuter} mb-50px`}>
-            <img src="./images/egg.svg" className="mb-15px" alt="" />
+            <IKImage
+              path="/images/egg.svg"
+              className="mb-15px"
+              alt=""
+              lqip={{ active: true }}
+            />
             <p className="font-secondary white fs-24px weight-6">uni.Bond</p>
           </div>
 
           <div className="mb-70px">
             <div className={`${styles.footerColumn} `}>
               <div className={styles.eggBox}>
-                <img src="./images/egg.svg" className="mb-15px" alt="" />
+                <IKImage
+                  path="/images/egg.svg"
+                  className="mb-15px"
+                  alt=""
+                  lqip={{ active: true }}
+                />
                 <p className="font-secondary white fs-24px weight-6">
                   uni.Bond
                 </p>

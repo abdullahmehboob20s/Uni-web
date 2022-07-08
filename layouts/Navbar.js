@@ -5,6 +5,7 @@ import { FiMenu } from "react-icons/fi";
 import { useEffect, useState } from "react";
 import OutsideClickDetector from "hooks/OutsideClickDetector";
 import useMediaQuery from "hooks/useMediaQuery";
+import { IKImage } from "imagekitio-react";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,8 +36,9 @@ function Navbar() {
       <div className="container-wrapper">
         <nav>
           <div className={styles.left}>
-            <img
-              src="./images/egg.svg"
+            <IKImage
+              path="/images/egg.svg"
+              lqip={{ active: true }}
               className={`${styles.logo} pointer`}
               alt=""
             />
