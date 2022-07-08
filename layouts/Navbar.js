@@ -4,10 +4,12 @@ import { IoClose } from "react-icons/io5";
 import { FiMenu } from "react-icons/fi";
 import { useEffect, useState } from "react";
 import OutsideClickDetector from "hooks/OutsideClickDetector";
+import useMediaQuery from "hooks/useMediaQuery";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const isBellow1550px = useMediaQuery("(max-width : 96.875em)");
   const sidebarRef = OutsideClickDetector(() => {
     setIsOpen(false);
   });
@@ -40,7 +42,10 @@ function Navbar() {
             />
 
             <div className={styles.inputWrapper}>
-              <input type="text" className="white fs-24px" />
+              <input
+                type="text"
+                className={`white ${isBellow1550px ? "fs-16px" : "fs-18px"}`}
+              />
               <span>
                 <GoSearch className="fs-26px" color="#525252" />
               </span>
@@ -65,14 +70,24 @@ function Navbar() {
               <IoClose size={30} color="white" />
             </button>
             <button
-              className={`fs-24px white uppercase radius-6px pointer ${styles.active}`}
+              className={`${
+                isBellow1550px ? "fs-16px" : "fs-18px"
+              } white uppercase radius-6px pointer ${styles.active}`}
             >
               Homepage
             </button>
-            <button className={`fs-24px white uppercase radius-6px pointer `}>
+            <button
+              className={`${
+                isBellow1550px ? "fs-16px" : "fs-18px"
+              } white uppercase radius-6px pointer `}
+            >
               Contact Us
             </button>
-            <button className={`fs-24px white uppercase radius-6px pointer `}>
+            <button
+              className={`${
+                isBellow1550px ? "fs-16px" : "fs-18px"
+              } white uppercase radius-6px pointer `}
+            >
               My Account
             </button>
           </div>

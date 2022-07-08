@@ -43,6 +43,11 @@
         }
       }
 
+      .box {
+        // border: 2px solid red;
+        // flex: 0.3;
+      }
+
       & > :not(:last-child) {
         margin-right: u.rem(60);
       }

@@ -14,7 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: u.rem(26) 0;
+    padding: u.rem(22) 0;
     z-index: 90;
 
     & > :not(:last-child) {
@@ -25,11 +25,11 @@
       display: flex;
       align-items: center;
       flex: 1;
-      max-width: u.rem(700);
+      max-width: u.rem(560);
 
       .logo {
         transition: all 0.3s ease;
-        width: u.rem(85);
+        width: u.rem(66);
       }
 
       .inputWrapper {
@@ -88,14 +88,14 @@
 
       button {
         transition: all 0.2s ease;
-        padding: u.rem(16) u.rem(30);
+        padding: u.rem(12) u.rem(30);
       }
       button.active {
         border: 2px solid colors.$orange;
       }
 
       & > :not(:last-child) {
-        margin-right: u.rem(16);
+        margin-right: u.rem(10);
       }
 
       .closeNavbarBtn {
@@ -108,11 +108,13 @@
     }
 
     @include u.breakpoint(twoxLarge) {
+      padding: u.rem(20) 0;
+
       .left {
         max-width: u.rem(550);
 
         .logo {
-          width: u.rem(70);
+          width: u.rem(56);
         }
       }
 
@@ -129,10 +131,10 @@
 
     @include u.breakpoint(xLarge) {
       .left {
-        max-width: u.rem(550);
+        max-width: u.rem(460);
 
         .logo {
-          width: u.rem(60);
+          width: u.rem(50);
         }
 
         & > :not(:last-child) {
@@ -142,7 +144,7 @@
       .right {
         button {
           transition: all 0.2s ease;
-          padding: u.rem(10) u.rem(16);
+          padding: u.rem(7) u.rem(14);
         }
         & > :not(:last-child) {
           margin-right: u.rem(10);
@@ -248,7 +250,7 @@
 
       .left {
         .logo {
-          width: u.rem(70);
+          width: u.rem(60);
         }
       }
 
@@ -259,6 +261,7 @@
           }
         }
       }
+
       @include u.breakpoint(small) {
         .left {
           .logo {
