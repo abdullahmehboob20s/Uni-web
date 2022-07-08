@@ -8,6 +8,7 @@ function Hero() {
     <div className={styles.heroWrapper}>
       <IKImage
         lqip={{ active: true, quality: 10 }}
+        transformation={[{ quality: 60 }]}
         path="/images/hero-egg.png"
         className={styles.heroEgg}
         alt=""
@@ -62,7 +63,8 @@ function Hero() {
 
           <IKImage
             path="/images/hero-egg.png"
-            lqip={{ active: true }}
+            lqip={{ active: true, quality: 10 }}
+            transformation={[{ quality: 60 }]}
             className={styles.heroRightImg}
             alt=""
           />
