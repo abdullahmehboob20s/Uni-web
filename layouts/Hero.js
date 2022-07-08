@@ -7,7 +7,7 @@ function Hero() {
   return (
     <div className={styles.heroWrapper}>
       <IKImage
-        lqip={{ active: true }}
+        lqip={{ active: true, quality: 10 }}
         path="/images/hero-egg.svg"
         className={styles.heroEgg}
         alt=""
