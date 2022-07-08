@@ -1,23 +1,30 @@
 import ShapedButton from "components/ShapedButton";
+import Image from "next/image";
 import React from "react";
 import styles from "scss/layout/Hero.module.scss";
 
 function Hero() {
   return (
     <div className={styles.heroWrapper}>
-      <img src="./images/hero-egg.svg" className={styles.heroEgg} alt="" />
+      <div className={styles.heroEgg}>
+        <Image
+          src="/images/hero-egg.svg"
+          objectFit="cover"
+          layout="fill"
+          alt=""
+        />
+      </div>
 
-      <img
-        src="./images/hero-blob-top-right.png"
-        className={styles.heroBlobTopRight}
-        alt=""
-      />
+      <div className={`${styles.heroBlobTopRight}`}>
+        <Image src="/images/hero-blob-top-right.png" layout="fill" alt="" />
+      </div>
 
       <img
         src="./images/stripe-hero.svg"
         className={styles.heroStripe}
         alt=""
       />
+
       <img
         src="./images/egg-stripe-1.svg"
         className={styles.eggStripe1}
