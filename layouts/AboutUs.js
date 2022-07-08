@@ -10,6 +10,7 @@ function AboutUs() {
         path="/images/about-us-stripes.png"
         className={styles.stripes}
         alt=""
+        loading="lazy"
       />
 
       <div className="container-wrapper-2">

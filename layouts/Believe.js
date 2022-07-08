@@ -8,6 +8,7 @@ function Believe() {
       <IKImage
         path="images/belive-stripe-1.svg"
         className={styles.believeStripe1}
+        loading="lazy"
       />
 
       <div className="container-wrapper-2">

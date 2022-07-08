@@ -7,9 +7,10 @@ function PartnerCard({ active }) {
     <div className={`${styles.card} ${active ? styles.active : ""}`}>
       <IKImage
         path="/images/partners-card-img.png"
+        loading="lazy"
         className="w-full"
-        alt=""
         lqip={{ active: true }}
+        alt=""
       />
     </div>
   );
