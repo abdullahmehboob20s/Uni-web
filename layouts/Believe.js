@@ -19,7 +19,7 @@ function Believe() {
             <h1 className="fs-80px white mb-20px weight-4 text-right">
               WE BELIEVE
             </h1>
-            <p className="fs-24px white font-secondary lh-1_5 text-right">
+            <p className="fs-16px white font-secondary lh-1_5 text-right">
               We believe in the technological future of Web3. Hence we help new
               web3 projects find their supporters and clients. We believe in the
               t their supporters and clients. We believe in the technological

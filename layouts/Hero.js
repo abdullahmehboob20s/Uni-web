@@ -8,7 +8,7 @@ function Hero() {
     <div className={styles.heroWrapper}>
       <IKImage
         lqip={{ active: true, quality: 10 }}
-        path="/images/hero-egg.svg"
+        path="/images/hero-egg.png"
         className={styles.heroEgg}
         alt=""
       />

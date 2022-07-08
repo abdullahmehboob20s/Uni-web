@@ -108,7 +108,7 @@
     }
 
     @include u.breakpoint(twoxLarge) {
-      padding: u.rem(20) 0;
+      padding: u.rem(16) 0;
 
       .left {
         max-width: u.rem(550);

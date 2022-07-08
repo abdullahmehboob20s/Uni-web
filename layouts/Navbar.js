@@ -44,10 +44,7 @@ function Navbar() {
             />
 
             <div className={styles.inputWrapper}>
-              <input
-                type="text"
-                className={`white ${isBellow1550px ? "fs-16px" : "fs-18px"}`}
-              />
+              <input type="text" className={`white fs-16px`} />
               <span>
                 <GoSearch className="fs-26px" color="#525252" />
               </span>
@@ -72,24 +69,14 @@ function Navbar() {
               <IoClose size={30} color="white" />
             </button>
             <button
-              className={`${
-                isBellow1550px ? "fs-16px" : "fs-18px"
-              } white uppercase radius-6px pointer ${styles.active}`}
+              className={`fs-16px white uppercase radius-6px pointer ${styles.active}`}
             >
               Homepage
             </button>
-            <button
-              className={`${
-                isBellow1550px ? "fs-16px" : "fs-18px"
-              } white uppercase radius-6px pointer `}
-            >
+            <button className={`fs-16px white uppercase radius-6px pointer `}>
               Contact Us
             </button>
-            <button
-              className={`${
-                isBellow1550px ? "fs-16px" : "fs-18px"
-              } white uppercase radius-6px pointer `}
-            >
+            <button className={`fs-16px white uppercase radius-6px pointer `}>
               My Account
             </button>
           </div>
