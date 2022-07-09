@@ -7,7 +7,7 @@ import styles from "scss/layout/Services.module.scss";
 function Services() {
   return (
     <div className={styles.wrapper}>
-      <IKImage
+      {/* <IKImage
         path="/images/service-upper-blob.png"
         lqip={{ active: true }}
         className={styles.upperBlob}
@@ -19,15 +19,15 @@ function Services() {
         lqip={{ active: true }}
         className={styles.leftRedBlob}
         alt=""
-      />
+      /> */}
 
-      <div className={`mb-120px ${styles.titleWrapper}`}>
-        <IKImage
+      <div className={`mb-60px ${styles.titleWrapper}`}>
+        {/* <IKImage
           path="/images/services-title-stripe.svg"
           lqip={{ active: true }}
           className={styles.titleStripe}
           alt=""
-        />
+        /> */}
         <div className="container-wrapper-2">
           <h1 className="text-center fs-84px white weight-4 ">OUR SERVICES</h1>
         </div>
@@ -35,7 +35,7 @@ function Services() {
 
       <div className="container-wrapper-2">
         <div className={`${styles.chart} mb-80px`}>
-          <IKImage
+          {/* <IKImage
             path="/images/services-cards-stripe.png"
             lqip={{ active: true }}
             className={styles.cardsStripe}
@@ -47,74 +47,71 @@ function Services() {
             lqip={{ active: true }}
             className={styles.cardBlob}
             alt=""
-          />
+          /> */}
 
           <div className={styles.cardsLeft}>
-            <ServiceCard img="/images/bitcoin.svg" size="30%" direction="left">
-              Token <br /> Distribution <br /> Support
-            </ServiceCard>
-            <ServiceCard img="/images/digital.svg" size="30%" direction="left">
-              Digital
-              <br /> Strategy
-            </ServiceCard>
             <ServiceCard
-              img="/images/customer-support.svg"
-              size="30%"
+              title="Token Distribution Support"
+              desc="A token is only as valuable as much it is distributed, we can help you with that."
+              img="/images/bitcoin.svg"
+              size="40%"
               direction="left"
-            >
-              24/7
-              <br /> Customer
-              <br /> Services
-            </ServiceCard>
+            ></ServiceCard>
             <ServiceCard
-              img="/images/customer-support.svg"
-              size="30%"
+              title="Digital Strategy"
+              desc="Branding in the digital space using years oe experience on all different platforms."
+              img="/images/digital.svg"
+              size="40%"
               direction="left"
-            >
-              24/7
-              <br /> Customer
-              <br /> Services
-            </ServiceCard>
+            ></ServiceCard>
+            <ServiceCard
+              title="24/7 Customer Services"
+              desc="We will be available to you, whenever you need. Round the clock. "
+              img="/images/customer-support.svg"
+              size="40%"
+              direction="left"
+            ></ServiceCard>
+            <ServiceCard
+              title="24/7 Customer Services"
+              desc="We will be available to you, whenever you need. Round the clock. "
+              img="/images/customer-support.svg"
+              size="40%"
+              direction="left"
+            ></ServiceCard>
           </div>
 
           <div className={styles.cardsRight}>
             <ServiceCard
+              title="Community Development"
+              desc="Creating an engaging and profitable community around your brand. "
               img="/images/community.svg"
-              size="30%"
+              size="40%"
               direction="right"
-            >
-              Community
-              <br /> Development
-            </ServiceCard>
+            ></ServiceCard>
 
             <ServiceCard
+              title="Security Support"
+              desc="Making sure your product is secure against cyber attacks."
               img="/images/security.svg"
-              size="26%"
+              size="32%"
               direction="right"
-            >
-              Security
-              <br /> Support
-            </ServiceCard>
+            ></ServiceCard>
 
             <ServiceCard
+              title="End-To-End Encrypted Chat"
+              desc="Implementing privacy protocols within chat service."
               img="/images/end-to-end.svg"
-              size="26%"
+              size="32%"
               direction="right"
-            >
-              End-To-End <br />
-              Encrypted
-              <br /> Chat
-            </ServiceCard>
+            ></ServiceCard>
 
             <ServiceCard
+              title="End-To-End Encrypted Chat"
+              desc="Implementing privacy protocols within chat service."
               img="/images/end-to-end.svg"
-              size="26%"
+              size="32%"
               direction="right"
-            >
-              End-To-End <br />
-              Encrypted
-              <br /> Chat
-            </ServiceCard>
+            ></ServiceCard>
           </div>
         </div>
 

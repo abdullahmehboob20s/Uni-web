@@ -3,41 +3,54 @@
 .card {
   display: flex;
   position: relative;
-  height: u.rem(140);
+  z-index: 4;
+  height: 9vw;
 
-  &::before {
-    content: "";
+  .cardBorder {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100% !important;
     height: 100%;
-    background: linear-gradient(103.38deg, #d09756 0%, #3d1b0a 100%);
-    z-index: -10;
+    object-fit: 100% 100%;
+    z-index: -1;
+    user-select: none;
+    pointer-events: none;
   }
 
-  .left {
+  .leftSection {
     flex: 1;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      font-size: 1.0999999999999999vw;
+      margin-bottom: 0.8vw;
+    }
 
     p {
-      font-size: 1.5vw;
+      font-size: 0.8999999999999999vw;
     }
   }
 
-  .right {
-    width: 45%;
+  .rightSection {
+    width: 9vw;
     display: flex;
     align-content: center;
     justify-content: center;
-    background: linear-gradient(
-      113.03deg,
-      rgba(255, 255, 255, 0.59) -55.23%,
-      rgba(255, 255, 255, 0.17) 100%
-    );
-    box-shadow: 0px 4px 90px rgba(0, 0, 0, 0.71);
-    // backdrop-filter: blur(111px);
+    position: absolute;
+    // box-shadow: 0px 4px 90px rgba(0, 0, 0, 0.71) !important;
+
+    .cardIconBG {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -10;
+      object-fit: 100% 100%;
+    }
 
     img {
       pointer-events: none;
@@ -46,80 +59,77 @@
   }
 
   &.left {
-    clip-path: polygon(15% 0, 100% 0, 100% 70%, 85% 100%, 0 100%, 0 30%);
+    padding-right: 4vw;
+    padding-left: 4vw;
 
-    .left {
+    .leftSection {
       text-align: right;
-      justify-content: flex-end;
       margin-right: u.rem(30);
     }
 
-    .right {
-      clip-path: polygon(30% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 30%);
+    .rightSection {
+      left: 90%;
+      bottom: 1vw;
+      height: 80%;
+      z-index: 10;
     }
   }
 
   &.right {
+    padding-right: 4vw;
+    padding-left: 4vw;
     flex-direction: row-reverse;
-    clip-path: polygon(0 0, 85% 0, 130% 100%, 16% 100%, 0% 70%, 0 100%);
 
-    .left {
+    .leftSection {
       text-align: left;
       justify-content: flex-start;
       margin-left: u.rem(30);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
-    .right {
-      clip-path: polygon(0 0, 70% 0, 180% 100%, 100% 100%, 0 100%, 0 0%);
+    .rightSection {
       box-shadow: none;
+    }
+
+    .rightSection {
+      right: 90%;
+      bottom: 1vw;
+      height: 80%;
+      z-index: 10;
     }
   }
 
   @include u.breakpoint(large) {
-    height: u.rem(100);
+    &.left {
+      padding-right: 2vw;
+      padding-left: 2vw;
+    }
+    &.right {
+      padding-right: 2vw;
+      padding-left: 2vw;
+    }
   }
   @include u.breakpoint(medium) {
-    height: u.rem(80);
-
-    .left {
-      p {
-        font-size: 1.6vw;
-      }
-    }
-
-    .right {
-      width: 38%;
-    }
-
     &.left {
-      .left {
-        margin-right: u.rem(18);
-      }
+      padding-right: 1vw;
+      padding-left: 3vw;
     }
-
     &.right {
-      .left {
-        margin-left: u.rem(18);
-      }
+      padding-right: 3vw;
+      padding-left: 1vw;
     }
   }
 
   @include u.breakpoint(small) {
-    height: u.rem(60);
-
-    .left {
-      p {
-        font-size: 1.7vw;
-      }
-    }
   }
   @include u.breakpoint(xsmall) {
-    height: u.rem(50);
-
-    .left {
-      p {
-        font-size: 1.8vw;
-      }
+    &.left {
+      padding-right: 0vw;
+    }
+    &.right {
+      padding-left: 0vw;
     }
   }
 }
