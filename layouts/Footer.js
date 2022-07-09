@@ -11,6 +11,14 @@ function Footer() {
 
   return (
     <div className={styles.wrapper}>
+      <button className={styles.emailIcon}>
+        <IKImage
+          path="/images/icons/footerEmailIcon.png"
+          lqip={{ active: true }}
+          alt=""
+        />
+      </button>
+
       <div className="container-wrapper-2">
         <div className={styles.footer}>
           <div className={`${styles.line} mb-50px`}></div>

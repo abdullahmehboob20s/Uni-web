@@ -46,7 +46,7 @@ function Navbar() {
             <div className={styles.inputWrapper}>
               <input type="text" className={`white fs-16px`} />
               <span>
-                <GoSearch className="fs-26px" color="#525252" />
+                <GoSearch className="fs-20px" color="#525252" />
               </span>
             </div>
           </div>

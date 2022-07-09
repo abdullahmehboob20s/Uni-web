@@ -14,7 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: u.rem(22) 0;
+    padding: u.rem(18) 0;
     z-index: 90;
 
     & > :not(:last-child) {
@@ -29,7 +29,7 @@
 
       .logo {
         transition: all 0.3s ease;
-        width: u.rem(66);
+        width: u.rem(50);
       }
 
       .inputWrapper {
@@ -41,8 +41,7 @@
         &::before {
           content: "";
           position: absolute;
-          top: 0;
-          left: 0;
+
           width: 100%;
           height: 100%;
           z-index: -2;
@@ -53,24 +52,28 @@
           background-position: top center;
           background-repeat: no-repeat;
           background-size: 100%;
+          top: calc(-1 * u.rem(6));
+          left: 0;
         }
         &::before {
           background: url("https://ik.imagekit.io/l4k8brcjb/images/input-border-img-bottom.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1657281029070");
           background-position: bottom center;
           background-repeat: no-repeat;
           background-size: 100%;
+          top: u.rem(6);
+          left: 0;
         }
 
         input {
           width: 100%;
-          padding: u.rem(16) u.rem(16);
+          padding: u.rem(10) u.rem(16);
           padding-right: u.rem(60);
         }
 
         span {
           display: flex;
           position: absolute;
-          top: 54%;
+          top: calc(50% + u.rem(3));
           right: u.rem(16);
           transform: translateY(-50%);
           pointer-events: none;
@@ -88,7 +91,12 @@
 
       button {
         transition: all 0.2s ease;
-        padding: u.rem(12) u.rem(30);
+        padding: u.rem(6) u.rem(16);
+        border: 2px solid transparent;
+
+        &:hover {
+          background-color: colors.$orange;
+        }
       }
       button.active {
         border: 2px solid colors.$orange;
@@ -114,17 +122,17 @@
         max-width: u.rem(550);
 
         .logo {
-          width: u.rem(56);
+          width: u.rem(44);
         }
       }
 
       .right {
-        button {
-          transition: all 0.2s ease;
-          padding: u.rem(10) u.rem(20);
-        }
+        // button {
+        //   transition: all 0.2s ease;
+        //   padding: u.rem(6) u.rem(16);
+        // }
         & > :not(:last-child) {
-          margin-right: u.rem(14);
+          margin-right: u.rem(10);
         }
       }
     }
@@ -242,40 +250,40 @@
   }
 
   &.scrolled {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.8);
     box-shadow: 0 u.rem(5) u.rem(10) rgba(208, 151, 86, 0.2);
 
     nav {
       padding: u.rem(16) 0;
 
-      .left {
-        .logo {
-          width: u.rem(60);
-        }
-      }
+      // .left {
+      //   .logo {
+      //     width: u.rem(60);
+      //   }
+      // }
 
-      @include u.breakpoint(twoxLarge) {
-        .left {
-          .logo {
-            width: u.rem(50);
-          }
-        }
-      }
+      // @include u.breakpoint(twoxLarge) {
+      //   .left {
+      //     .logo {
+      //       width: u.rem(50);
+      //     }
+      //   }
+      // }
 
-      @include u.breakpoint(small) {
-        .left {
-          .logo {
-            width: u.rem(36);
-          }
-        }
-      }
-      @include u.breakpoint(xsmall) {
-        .left {
-          .logo {
-            width: u.rem(34);
-          }
-        }
-      }
+      // @include u.breakpoint(small) {
+      //   .left {
+      //     .logo {
+      //       width: u.rem(36);
+      //     }
+      //   }
+      // }
+      // @include u.breakpoint(xsmall) {
+      //   .left {
+      //     .logo {
+      //       width: u.rem(34);
+      //     }
+      //   }
+      // }
     }
   }
 }
