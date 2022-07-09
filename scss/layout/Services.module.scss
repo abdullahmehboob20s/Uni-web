@@ -33,13 +33,14 @@
     display: flex;
     position: relative;
     justify-content: space-between;
+    margin-bottom: 4vw;
 
     .cardsStripe {
       position: absolute;
-      top: 54%;
+      top: 60%;
       left: 50%;
-      width: 25%;
-      height: 100%;
+      width: 20%;
+      height: 100% !important;
       transform: translate(-50%, -50%);
       z-index: -20;
     }
@@ -50,6 +51,8 @@
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: -40;
+      width: 100%;
+      object-fit: cover;
     }
 
     .cardsLeft {

@@ -34,7 +34,21 @@ function Services() {
       </div>
 
       <div className="container-wrapper-2">
-        <div className={`${styles.chart} mb-80px`}>
+        <div className={`${styles.chart}`}>
+          <IKImage
+            path="/images/services-tree.png"
+            lqip={{ active: true }}
+            className={styles.cardsStripe}
+            alt=""
+          />
+
+          <IKImage
+            path="/images/services-circle-red-blob.png"
+            lqip={{ active: true }}
+            className={styles.cardBlob}
+            alt=""
+          />
+
           {/* <IKImage
             path="/images/services-cards-stripe.png"
             lqip={{ active: true }}
