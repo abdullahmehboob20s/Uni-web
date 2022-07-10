@@ -53,7 +53,7 @@ function Hero() {
               LAUNCH YOUR <br /> OWN TOKEN
             </h1>
 
-            <p className="fs-22px white font-secondary weight-3 mb-35px lh-1_4">
+            <p className="fs-16px white font-secondary weight-3 mb-35px lh-1_4">
               Launch your own unique token with us and seal your smart contracts
               with the reliable security of Block Audit.
             </p>
