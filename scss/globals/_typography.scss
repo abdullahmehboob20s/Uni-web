@@ -283,6 +283,16 @@ a {
 
 // MEDIA QUIERS ==============
 
+@include u.breakpoint(twoThousand) {
+  :root {
+    --fs-70px: #{u.rem(50)};
+    --fs-78px: #{u.rem(60)};
+    --fs-84px: #{u.rem(64)};
+    --fs-80px: #{u.rem(68)};
+    --fs-30px: #{u.rem(26)};
+    --fs-22px: #{u.rem(20)};
+  }
+}
 @include u.breakpoint(twoxLarge) {
   :root {
     --fs-24px: #{u.rem(16)};

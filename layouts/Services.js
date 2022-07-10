@@ -1,10 +1,12 @@
 import ServiceCard from "components/ServiceCard";
 import ShapedButton from "components/ShapedButton";
+import useMediaQuery from "hooks/useMediaQuery";
 import { IKImage } from "imagekitio-react";
 import React from "react";
 import styles from "scss/layout/Services.module.scss";
 
 function Services() {
+  const isBellow700px = useMediaQuery("(max-width : 43.75em)");
   return (
     <div className={styles.wrapper}>
       {/* <IKImage
@@ -130,7 +132,11 @@ function Services() {
         </div>
 
         <div className="text-center">
-          <ShapedButton title="CONNECT NOW" />
+          <ShapedButton
+            title="CONNECT NOW"
+            className={styles.shapedButton}
+            fsSize={isBellow700px ? "fs-10px" : "fs-22px"}
+          />
         </div>
       </div>
     </div>
